@@ -27,10 +27,11 @@ public class LoginServlet extends HttpServlet {
             PreparedStatement.setString(2, psw);
             ResultSet rs = PreparedStatement.executeQuery();
             if(rs.next()){
-                RequestDispatcher dp = request.getRequestDispatcher("userPage.jsp");
-                request.setAttribute("firstName",firstName);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("userPage.jsp");
+                request.setAttribute("email",email);
                 request.setAttribute("psw", psw);
-                dp.forward(request,response);
+                request.setAttribute("firstName",firstName);
+                dispatcher.forward(request,response);
             } else {
                 RequestDispatcher dp = request.getRequestDispatcher("loginError.jsp");
                 dp.forward(request,response);
