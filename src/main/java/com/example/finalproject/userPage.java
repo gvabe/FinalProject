@@ -26,6 +26,9 @@ public class userPage extends HttpServlet {
             if(!psw.equals(confirmPsw)){
                 dispatcher = request.getRequestDispatcher("userPageError.jsp");
                 dispatcher.forward(request,response);
+            } else if (students.userExists(email)){
+                dispatcher = request.getRequestDispatcher("userPageError.jsp");
+                dispatcher.forward(request,response);
             } else {
                 user.setEmail(email);
                 user.setPsw(psw);
@@ -49,7 +52,6 @@ public class userPage extends HttpServlet {
             System.err.println("Got an exception");
             System.err.println(e);
         }
-
     }
 }
 
