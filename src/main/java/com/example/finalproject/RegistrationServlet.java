@@ -51,7 +51,6 @@ public class RegistrationServlet extends HttpServlet {
                 request.setAttribute("profession", profession);
                 dispatcher.forward(request,response);
             }
-
         }
         catch (Exception e){
             System.err.println("Got an exception");
