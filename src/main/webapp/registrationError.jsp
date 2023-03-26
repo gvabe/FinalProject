@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Registration</h1>
-<p>error</p>
+<p>Registration failed, try again</p>
 <form action="registration-servlet" method="post">
     <label for="email"><b>Enter your username or email</b></label>
     <input type="text" placeholder="Username/E-Mail" name="email" id="email" required><br><br>
