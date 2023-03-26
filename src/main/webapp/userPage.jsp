@@ -5,8 +5,10 @@
     <title>User Page</title>
 </head>
 <body>
-<h1>Hello <%=request.getParameter("email")%></h1>
+<h1>Hello <%=request.getParameter("firstName")%></h1>
 <form action="userPage" method="post">
+    <label for="email"><b>Update your email</b></label>
+    <input type="text" placeholder="Email" name="email" id="email" ><br><br>
 
     <label for="psw"><b>Update your password</b></label>
     <input type="password" placeholder="Password" name="psw" id="psw" ><br><br>
